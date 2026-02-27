@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Database, CalendarClock, Mail } from 'lucide-react';
+import { ArrowRight, Database, CalendarClock, Mail, Globe, FileText, Headphones } from 'lucide-react';
 
 interface ServiceCardProps {
   title: string;
@@ -9,32 +9,29 @@ interface ServiceCardProps {
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon, active }) => {
+  const [hovered, setHovered] = React.useState(false);
+  const bg = active ? '#D6B8A5' : hovered ? '#EAD9C8' : '#F5EDE6';
+  const border = '#D6B8A5';
+  const textColor = '#3B2D27';
+  const mutedColor = '#9C8070';
+  const iconBg = active ? '#C9A88F' : '#EAD9C8';
+
   return (
-    <div 
-      className={`
-        aspect-square p-8 flex flex-col justify-between border border-black transition-all duration-300 group cursor-pointer
-        ${active ? 'bg-black text-white hover:bg-gray-900' : 'bg-white text-black hover:bg-black hover:text-white'}
-      `}
+    <div
+      className="p-7 rounded-2xl flex flex-col gap-5 cursor-pointer transition-all duration-300 hover:-translate-y-1"
+      style={{ backgroundColor: bg, border: `1px solid ${border}` }}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
     >
-      <div className={`
-        w-14 h-14 rounded-full flex items-center justify-center border-2
-        ${active ? 'border-white' : 'border-black group-hover:border-white'}
-      `}>
-        {React.cloneElement(icon as React.ReactElement, { 
-             className: `w-7 h-7 ${active ? 'text-white' : 'text-black group-hover:text-white'}`
-        })}
+      <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: iconBg, color: '#8C6A55' }}>
+        {icon}
       </div>
-
       <div>
-        <h3 className="text-2xl font-bold mb-3 uppercase leading-tight">{title}</h3>
-        <p className={`text-sm opacity-80 mb-6 line-clamp-3 ${active ? 'text-gray-300' : 'text-gray-600 group-hover:text-gray-300'}`}>
-            {description}
-        </p>
+        <h3 className="text-base font-semibold mb-2 uppercase tracking-wide" style={{ color: textColor }}>{title}</h3>
+        <p className="text-sm font-light leading-relaxed" style={{ color: mutedColor }}>{description}</p>
       </div>
-
-      <div className="flex items-center gap-2 text-sm font-semibold tracking-wide uppercase">
-        Read More 
-        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+      <div className="flex items-center gap-1 text-xs font-medium tracking-wide uppercase" style={{ color: '#8C6A55' }}>
+        Learn More <ArrowRight className="w-3 h-3" />
       </div>
     </div>
   );
@@ -42,66 +39,46 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon, act
 
 const Services: React.FC = () => {
   return (
-    <section id="services" className="py-24 px-6 md:px-12 lg:px-20 max-w-screen-2xl mx-auto relative">
-      
-      {/* Top Header */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
-        <div className="max-w-2xl">
-            <div className="flex items-center gap-4 mb-4">
-                <span className="w-12 h-0.5 bg-black"></span>
-                <span className="uppercase font-bold tracking-widest text-sm text-gray-500">My Services</span>
-            </div>
-            <h2 className="text-5xl md:text-6xl font-black uppercase leading-none mb-6">
-                What I'm <br/> Offering
-            </h2>
-        </div>
-
-        <div className="md:max-w-xs lg:max-w-md">
-            <p className="text-gray-600 mb-6 text-sm md:text-base">
-                I provide comprehensive virtual assistance tailored to your business needs, allowing you to focus on growth while I handle the details.
-            </p>
-            <button className="px-8 py-3 bg-black text-white rounded-full font-bold uppercase text-xs tracking-widest hover:bg-gray-800 transition-colors">
-                All Services
-            </button>
-        </div>
+    <section id="services" className="py-24 px-6 md:px-12 lg:px-20 max-w-screen-xl mx-auto">
+      <div className="mb-14">
+        <p className="text-xs font-medium tracking-[0.3em] uppercase mb-3" style={{ color: '#9C8070' }}>What I Offer</p>
+        <h2 className="text-4xl md:text-5xl font-light" style={{ color: '#3B2D27' }}>
+          Services &amp; <span className="font-allura text-5xl md:text-6xl" style={{ color: '#8C6A55' }}>Expertise</span>
+        </h2>
       </div>
 
-      {/* Main Grid Content */}
-      <div className="relative flex flex-col md:flex-row gap-8 lg:gap-12">
-        
-        {/* Scroll Down Indicator (Absolute Left) */}
-        <div className="hidden lg:flex flex-col items-center absolute -left-16 top-0 h-full">
-            <span className="text-xs font-bold tracking-[0.3em] uppercase rotate-180" style={{ writingMode: 'vertical-rl' }}>
-                Scroll Down
-            </span>
-            <div className="w-px h-24 bg-black mt-4 mb-4"></div>
-            <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center text-white">
-                <ArrowRight className="w-4 h-4 rotate-90" />
-            </div>
-        </div>
-
-        {/* Service Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full pl-0 lg:pl-12">
-            
-            <ServiceCard 
-                active={true}
-                title="Data Entry & Analysis"
-                description="Precision-focused data management, spreadsheet organization, CRM updates, and insightful data cleaning services to keep your records immaculate."
-                icon={<Database />}
-            />
-
-            <ServiceCard 
-                title="Executive Assistance"
-                description="Managing complex calendars, booking travel, coordinating meetings, and handling personal tasks so you can reclaim your time."
-                icon={<CalendarClock />}
-            />
-
-            <ServiceCard 
-                title="Email & Communication"
-                description="Inbox zero strategies, drafting professional correspondence, and acting as the first point of contact for your stakeholders."
-                icon={<Mail />}
-            />
-        </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <ServiceCard
+          active
+          title="Data Entry & Analysis"
+          description="Precision data management, spreadsheet organization, CRM updates, and database maintenance to keep your records immaculate."
+          icon={<Database />}
+        />
+        <ServiceCard
+          title="Executive Assistance"
+          description="Calendar management, travel booking, meeting coordination, and personal task handling so you can reclaim your time."
+          icon={<CalendarClock />}
+        />
+        <ServiceCard
+          title="Email & Communication"
+          description="Inbox management, professional correspondence drafting, and first-point-of-contact handling for your stakeholders."
+          icon={<Mail />}
+        />
+        <ServiceCard
+          title="Digital Content & SEO"
+          description="Google My Business posting, Canva content creation, social media scheduling, and basic keyword research."
+          icon={<Globe />}
+        />
+        <ServiceCard
+          title="Real Estate Support"
+          description="Property listing uploads, image management, CRM and dialer updates, and database maintenance for real estate teams."
+          icon={<FileText />}
+        />
+        <ServiceCard
+          title="Technical Support"
+          description="Tier 1 &amp; 2 technical troubleshooting, router setup guidance, CRM documentation, and customer issue resolution."
+          icon={<Headphones />}
+        />
       </div>
     </section>
   );

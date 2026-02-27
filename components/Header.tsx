@@ -1,57 +1,87 @@
-import React, { useState } from 'react';
-import { ArrowUpRight, Menu, X } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { Menu, X } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 16);
+    handleScroll();
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navLinks = [
-    { name: 'My Projects', href: '#projects', subtitle: 'See my recent work' },
-    { name: 'About Me', href: '#about', subtitle: 'Learn who I am' },
-    { name: 'Contact Me', href: '#contact', subtitle: 'Get in touch' },
+    { name: 'About', href: '#about' },
+    { name: 'Services', href: '#services' },
+    { name: 'Experience', href: '#experience' },
+    { name: 'Contact', href: '#contact' },
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 px-6 py-6 md:px-12 md:py-8 flex justify-between items-start">
-      {/* Logo Area */}
-      <div className="flex flex-col">
-        <span className="text-xl font-medium border-b-2 border-black pb-1 inline-block w-fit">
-          it's me
-        </span>
-      </div>
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 px-6 py-5 md:px-12 flex justify-between items-center transition-all duration-500 ${
+        isScrolled
+          ? 'border-b'
+          : 'border-b border-transparent'
+      }`}
+      style={isScrolled ? { backgroundColor: 'rgba(245,237,230,0.92)', backdropFilter: 'blur(10px)', borderColor: '#D6B8A5' } : {}}
+    >
+      {/* Logo */}
+      <a href="#home" className="font-allura text-3xl" style={{ color: '#8C6A55' }}>
+        Honey Faith
+      </a>
 
       {/* Desktop Nav */}
-      <nav className="hidden md:flex space-x-12">
+      <nav className="hidden md:flex items-center gap-10">
         {navLinks.map((link) => (
-          <a key={link.name} href={link.href} className="group flex flex-col items-start">
-            <div className="flex items-center gap-1 font-semibold text-sm uppercase tracking-wide border-b border-transparent group-hover:border-black transition-colors">
-              {link.name}
-              <ArrowUpRight className="w-4 h-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-            </div>
-            <span className="text-[10px] text-gray-500 mt-1">{link.subtitle}</span>
+          <a
+            key={link.name}
+            href={link.href}
+            className="text-sm font-medium tracking-wide transition-colors duration-200"
+            style={{ color: '#6B5A4E' }}
+            onMouseEnter={e => (e.currentTarget.style.color = '#8C6A55')}
+            onMouseLeave={e => (e.currentTarget.style.color = '#6B5A4E')}
+          >
+            {link.name}
           </a>
         ))}
+        <a
+          href="#contact"
+          className="px-5 py-2 rounded-full text-sm font-medium transition-all duration-200"
+          style={{ backgroundColor: '#D6B8A5', color: '#3B2D27' }}
+          onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#C9A88F')}
+          onMouseLeave={e => (e.currentTarget.style.backgroundColor = '#D6B8A5')}
+        >
+          Hire Me
+        </a>
       </nav>
 
-      {/* Mobile Menu Toggle */}
-      <button 
+      {/* Mobile Toggle */}
+      <button
         className="md:hidden p-2"
+        style={{ color: '#6B5A4E' }}
         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
       >
-        {mobileMenuOpen ? <X /> : <Menu />}
+        {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
       </button>
 
-      {/* Mobile Nav Overlay */}
+      {/* Mobile Overlay */}
       {mobileMenuOpen && (
-        <div className="absolute top-full left-0 w-full bg-white border-b border-gray-200 p-6 flex flex-col gap-6 md:hidden shadow-xl">
-           {navLinks.map((link) => (
-            <a 
-              key={link.name} 
-              href={link.href} 
-              className="flex items-center justify-between font-semibold text-lg"
+        <div
+          className="absolute top-full left-0 w-full p-6 flex flex-col gap-5 md:hidden shadow-lg border-t"
+          style={{ backgroundColor: '#F5EDE6', borderColor: '#D6B8A5' }}
+        >
+          {navLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              className="text-base font-medium"
+              style={{ color: '#4A3728' }}
               onClick={() => setMobileMenuOpen(false)}
             >
               {link.name}
-              <ArrowUpRight className="w-5 h-5" />
             </a>
           ))}
         </div>

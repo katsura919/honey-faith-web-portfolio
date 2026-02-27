@@ -1,55 +1,83 @@
 import React from 'react';
-import { Facebook, Twitter, Linkedin, Instagram, ArrowUpRight } from 'lucide-react';
+import { Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
-    <footer id="contact" className="bg-black text-white px-6 md:px-12 lg:px-20 py-20 relative overflow-hidden">
-      
+    <footer id="contact-footer" className="px-6 md:px-12 lg:px-20 py-20 relative overflow-hidden" style={{ backgroundColor: '#3B2D27', color: '#EAD9C8' }}>
+
       {/* Decorative large text */}
-      <div className="absolute top-0 left-0 w-full overflow-hidden opacity-5 pointer-events-none">
-          <h1 className="text-[15rem] font-bold whitespace-nowrap leading-none select-none">
-              HONEY FAITH
-          </h1>
+      <div className="absolute top-0 left-0 w-full overflow-hidden pointer-events-none select-none" style={{ opacity: 0.04 }}>
+        <h1 className="text-[12rem] font-light whitespace-nowrap leading-none font-allura" style={{ color: '#EAD9C8' }}>
+          Honey Faith
+        </h1>
       </div>
 
-      <div className="max-w-screen-2xl mx-auto relative z-10 flex flex-col md:flex-row justify-between items-start gap-12">
-        
-        {/* Left Column */}
+      <div className="max-w-screen-xl mx-auto relative z-10 flex flex-col md:flex-row justify-between items-start gap-12">
+
+        {/* Left */}
         <div className="max-w-lg">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Let's work together.</h2>
-            <p className="text-gray-400 text-lg mb-8">
-                Need a reliable partner to handle your administrative tasks? 
-                Reach out to me and let's discuss how I can help streamline your business.
-            </p>
-            <a href="mailto:honey.faith@example.com" className="inline-flex items-center gap-2 text-2xl font-bold border-b-2 border-white pb-1 hover:text-gray-300 hover:border-gray-300 transition-colors">
-                honey.faith@example.com <ArrowUpRight />
-            </a>
+          <h2 className="font-allura text-5xl mb-4" style={{ color: '#D6B8A5' }}>Honey Faith</h2>
+          <p className="text-sm font-light leading-relaxed mb-6" style={{ color: '#C4AA97' }}>
+            Detail-oriented Virtual Assistant and Digital Support Specialist based in the Philippines, serving North American clients with reliability and care.
+          </p>
+          <a
+            href="mailto:honeyfaith.avs@gmail.com"
+            className="inline-flex items-center gap-2 text-base font-light border-b pb-0.5 transition-colors duration-200"
+            style={{ color: '#D6B8A5', borderColor: '#D6B8A5' }}
+            onMouseEnter={e => { e.currentTarget.style.color = '#EAD9C8'; e.currentTarget.style.borderColor = '#EAD9C8'; }}
+            onMouseLeave={e => { e.currentTarget.style.color = '#D6B8A5'; e.currentTarget.style.borderColor = '#D6B8A5'; }}
+          >
+            honeyfaith.avs@gmail.com
+          </a>
         </div>
 
-        {/* Right Column - Navigation & Socials */}
-        <div className="flex flex-col gap-8 w-full md:w-auto">
-            <div className="grid grid-cols-2 gap-x-12 gap-y-4">
-                <a href="#about" className="text-gray-400 hover:text-white transition-colors">About</a>
-                <a href="#services" className="text-gray-400 hover:text-white transition-colors">Services</a>
-                <a href="#projects" className="text-gray-400 hover:text-white transition-colors">Projects</a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Reviews</a>
-            </div>
+        {/* Right */}
+        <div className="flex flex-col gap-8">
+          <div className="grid grid-cols-2 gap-x-12 gap-y-3">
+            {[
+              { label: 'About', href: '#about' },
+              { label: 'Services', href: '#services' },
+              { label: 'Experience', href: '#experience' },
+              { label: 'Contact', href: '#contact' },
+            ].map((l) => (
+              <a
+                key={l.label}
+                href={l.href}
+                className="text-sm font-light transition-colors duration-200"
+                style={{ color: '#C4AA97' }}
+                onMouseEnter={e => (e.currentTarget.style.color = '#EAD9C8')}
+                onMouseLeave={e => (e.currentTarget.style.color = '#C4AA97')}
+              >
+                {l.label}
+              </a>
+            ))}
+          </div>
 
-            <div className="flex gap-4 mt-4">
-                {[Facebook, Twitter, Linkedin, Instagram].map((Icon, idx) => (
-                    <a key={idx} href="#" className="w-10 h-10 border border-gray-700 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-all">
-                        <Icon className="w-4 h-4" />
-                    </a>
-                ))}
-            </div>
+          <div className="flex gap-3">
+            {[Facebook, Twitter, Linkedin, Instagram].map((Icon, idx) => (
+              <a
+                key={idx}
+                href="#"
+                className="w-9 h-9 rounded-full flex items-center justify-center transition-all duration-200"
+                style={{ border: '1px solid #6B5A4E', color: '#C4AA97' }}
+                onMouseEnter={e => { e.currentTarget.style.backgroundColor = '#D6B8A5'; e.currentTarget.style.color = '#3B2D27'; }}
+                onMouseLeave={e => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = '#C4AA97'; }}
+              >
+                <Icon className="w-3.5 h-3.5" />
+              </a>
+            ))}
+          </div>
         </div>
       </div>
 
-      <div className="border-t border-gray-800 mt-20 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+      <div
+        className="mt-16 pt-6 flex flex-col md:flex-row justify-between items-center text-xs font-light"
+        style={{ borderTop: '1px solid #6B5A4E', color: '#9C8070' }}
+      >
         <p>&copy; {new Date().getFullYear()} Honey Faith. All rights reserved.</p>
-        <div className="flex gap-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-white">Privacy Policy</a>
-            <a href="#" className="hover:text-white">Terms of Service</a>
+        <div className="flex gap-6 mt-3 md:mt-0">
+          <a href="#" className="hover:text-[#D6B8A5] transition-colors">Privacy Policy</a>
+          <a href="#" className="hover:text-[#D6B8A5] transition-colors">Terms of Service</a>
         </div>
       </div>
     </footer>

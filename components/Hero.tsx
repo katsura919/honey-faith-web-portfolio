@@ -1,90 +1,96 @@
 import React from 'react';
-import { ArrowDown, Check, Hand, Download } from 'lucide-react';
+import { ArrowDown, Mail } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <section id="about" className="relative pt-32 pb-16 px-6 md:px-12 lg:px-20 max-w-screen-2xl mx-auto min-h-screen flex flex-col lg:flex-row items-center justify-between gap-12">
-      
-      {/* Left Content */}
-      <div className="flex-1 max-w-xl z-10">
-        <div className="flex items-center gap-2 mb-4">
-          <Hand className="w-8 h-8 text-yellow-500 rotate-12" />
-          <span className="text-gray-500 font-medium">Welcome to my portfolio</span>
-        </div>
-        
-        <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold leading-tight tracking-tight mb-4">
-          Hello! <br /> 
-          I'm <span className="relative">Honey<svg className="absolute w-full h-3 -bottom-1 left-0 text-yellow-300 -z-10" fill="currentColor" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0 5 Q 50 10 100 5 L 100 0 Q 50 5 0 0 Z" /></svg></span>
-        </h1>
+    <section
+      id="home"
+      className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 pt-24 pb-16"
+    >
+      {/* Soft decorative ring */}
+      <div
+        className="absolute w-[520px] h-[520px] rounded-full pointer-events-none"
+        style={{
+          border: '1px solid #D6B8A5',
+          opacity: 0.35,
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+        }}
+      />
+      <div
+        className="absolute w-[680px] h-[680px] rounded-full pointer-events-none"
+        style={{
+          border: '1px solid #D6B8A5',
+          opacity: 0.18,
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+        }}
+      />
 
-        <div className="flex items-center gap-4 mb-8">
-            <span className="h-px w-16 bg-black"></span>
-            <h2 className="text-2xl md:text-3xl font-light italic">Virtual Assistant <span className="not-italic font-bold"> &amp; Data Expert</span></h2>
-            <span className="text-2xl">✨</span>
-        </div>
-
-        <p className="text-gray-600 text-lg leading-relaxed mb-8 max-w-md">
-          I am Honey Faith, a dedicated <strong>Virtual Assistant</strong> and <strong>Data Entry Specialist</strong>. 
-          I help executives and businesses streamline their operations, manage chaos, and ensure data accuracy with elegance and efficiency.
+      {/* Content */}
+      <div className="relative z-10 max-w-3xl mx-auto">
+        {/* Label */}
+        <p
+          className="text-xs font-medium tracking-[0.3em] uppercase mb-6 animate-fade-in-up"
+          style={{ color: '#9C8070' }}
+        >
+          Virtual Assistant &amp; Digital Support Specialist
         </p>
 
-        <div className="space-y-2 mb-10">
-          {[
-            'Accurate & Reliable Data Management',
-            'Executive Scheduling & Calendar Control',
-            'Seamless Communication Handling'
-          ].map((item, i) => (
-            <div key={i} className="flex items-center gap-3">
-              <div className="w-5 h-5 rounded-full bg-black text-white flex items-center justify-center">
-                <Check className="w-3 h-3" />
-              </div>
-              <span className="font-medium text-gray-800">{item}</span>
-            </div>
-          ))}
-        </div>
+        {/* Name */}
+        <h1
+          className="font-allura leading-none mb-6 animate-fade-in-up-2"
+          style={{ fontSize: 'clamp(5rem, 14vw, 10rem)', color: '#8C6A55' }}
+        >
+          Honey Faith
+        </h1>
 
-        <div className="flex flex-wrap items-center gap-6">
-          <a href="#contact" className="px-8 py-4 bg-black text-white rounded-full font-bold hover:scale-105 transition-transform duration-200">
-            Let's Talk
+        {/* Subtitle */}
+        <p
+          className="text-base md:text-lg font-light tracking-wide mb-4 animate-fade-in-up-3"
+          style={{ color: '#6B5A4E' }}
+        >
+          Data Entry Specialist &nbsp;&bull;&nbsp; Digital Content &amp; SEO Support &nbsp;&bull;&nbsp; Admin Assistance
+        </p>
+
+        {/* Tagline */}
+        <p
+          className="text-sm md:text-base font-light max-w-xl mx-auto mb-10 leading-relaxed animate-fade-in-up-3"
+          style={{ color: '#9C8070' }}
+        >
+          Detail-oriented and reliable support for real estate, marketing, and technical teams.
+        </p>
+
+        {/* CTAs */}
+        <div className="flex flex-wrap items-center justify-center gap-4 animate-fade-in-up-4">
+          <a
+            href="#services"
+            className="px-8 py-3 rounded-full text-sm font-medium transition-all duration-200 hover:scale-105"
+            style={{ backgroundColor: '#D6B8A5', color: '#3B2D27' }}
+            onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#C9A88F')}
+            onMouseLeave={e => (e.currentTarget.style.backgroundColor = '#D6B8A5')}
+          >
+            View My Work
           </a>
-          <a href="#" className="flex items-center gap-2 font-semibold border-b border-black pb-0.5 hover:text-gray-600 hover:border-gray-600 transition-colors">
-            Download CV <Download className="w-4 h-4" />
+          <a
+            href="#contact"
+            className="px-8 py-3 rounded-full text-sm font-medium border transition-all duration-200 hover:scale-105 flex items-center gap-2"
+            style={{ borderColor: '#D6B8A5', color: '#6B5A4E', backgroundColor: 'transparent' }}
+            onMouseEnter={e => { e.currentTarget.style.backgroundColor = '#EAD9C8'; }}
+            onMouseLeave={e => { e.currentTarget.style.backgroundColor = 'transparent'; }}
+          >
+            <Mail className="w-4 h-4" /> Contact Me
           </a>
         </div>
       </div>
 
-      {/* Right Image/Visuals */}
-      <div className="flex-1 relative flex justify-center lg:justify-end mt-12 lg:mt-0 w-full">
-        {/* Abstract Shapes */}
-        <div className="absolute top-1/4 -left-10 lg:left-0 z-0">
-             <svg width="100" height="100" viewBox="0 0 100 100" className="animate-spin-slow opacity-20">
-                <path d="M50 0 L61 35 L98 35 L68 57 L79 91 L50 70 L21 91 L32 57 L2 35 L39 35 Z" fill="black" />
-             </svg>
-        </div>
-        
-        {/* Main Portrait Container */}
-        <div className="relative z-10 w-[350px] h-[450px] md:w-[450px] md:h-[550px] lg:w-[500px] lg:h-[600px]">
-             {/* Black Circle "Hello" */}
-            <div className="absolute top-1/2 -left-12 -translate-y-1/2 w-32 h-32 bg-black rounded-full flex items-center justify-center text-white font-bold text-xl z-20 shadow-xl border-4 border-white hidden md:flex">
-                Hello
-            </div>
-
-            {/* Squiggle */}
-            <svg className="absolute -bottom-10 -right-10 w-24 h-24 text-black z-20" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="8">
-                <path d="M10 50 Q 25 10 50 50 T 90 50" />
-            </svg>
-
-            {/* Image */}
-            <div className="w-full h-full rounded-[3rem] overflow-hidden bg-gray-200 relative border-2 border-black/5 shadow-2xl">
-                 <img 
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop" 
-                    alt="Honey Faith Portrait" 
-                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
-                 />
-            </div>
-        </div>
+      {/* Scroll hint */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 animate-fade-in-up-4">
+        <span className="text-[10px] tracking-[0.25em] uppercase" style={{ color: '#9C8070' }}>Scroll</span>
+        <ArrowDown className="w-3.5 h-3.5" style={{ color: '#9C8070' }} />
       </div>
-
     </section>
   );
 };
