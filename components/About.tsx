@@ -21,9 +21,8 @@ const About: React.FC = () => {
           </h2>
 
           <p className="text-base font-light leading-relaxed mb-5" style={{ color: '#6B5A4E' }}>
-            I'm Honey Faith, a dedicated Virtual Assistant and Digital Support Specialist based in
-            Cagayan de Oro, Philippines. With over 2 years of hands-on experience in administrative
-            support, real estate data entry, SEO, and technical assistance, I help North American
+            I'm Honey Faith, a dedicated Virtual Assistant and Digital Support Specialist based in Philippines. With over 2 years of hands-on experience in administrative
+            support, real estate data entry, SEO, and technical assistance, I help
             clients stay organized, efficient, and focused on growth.
           </p>
           <p className="text-base font-light leading-relaxed mb-8" style={{ color: '#6B5A4E' }}>
@@ -34,8 +33,8 @@ const About: React.FC = () => {
           <div className="flex flex-col gap-3">
             {[
               { icon: <MapPin className="w-4 h-4" />, text: 'Cagayan de Oro, Philippines' },
-              { icon: <GraduationCap className="w-4 h-4" />, text: 'BS Accountancy (Undergraduate)' },
-              { icon: <Globe className="w-4 h-4" />, text: 'Serving clients across North America' },
+              { icon: <GraduationCap className="w-4 h-4" />, text: 'BS in Accountancy' },
+              { icon: <Globe className="w-4 h-4" />, text: 'Serving clients across the world' },
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-3" style={{ color: '#9C8070' }}>
                 <span style={{ color: '#C9A88F' }}>{item.icon}</span>
