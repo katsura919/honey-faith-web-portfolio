@@ -17,7 +17,7 @@ const About: React.FC = () => {
           <p className="text-xs font-medium tracking-[0.3em] uppercase mb-3" style={{ color: '#9C8070' }}>About Me</p>
           <h2 className="text-4xl md:text-5xl font-light leading-tight mb-6" style={{ color: '#3B2D27' }}>
             The person behind<br />
-            <span className="font-allura text-5xl md:text-6xl" style={{ color: '#8C6A55' }}>your workflow</span>
+            <span className="font-allura text-5xl md:text-6xl" style={{ color: '#7A6038' }}>your workflow</span>
           </h2>
 
           <p className="text-base font-light leading-relaxed mb-5" style={{ color: '#6B5A4E' }}>
@@ -37,7 +37,7 @@ const About: React.FC = () => {
               { icon: <Globe className="w-4 h-4" />, text: 'Serving clients across the world' },
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-3" style={{ color: '#9C8070' }}>
-                <span style={{ color: '#C9A88F' }}>{item.icon}</span>
+                <span style={{ color: '#BDB395' }}>{item.icon}</span>
                 <span className="text-sm font-light">{item.text}</span>
               </div>
             ))}
@@ -50,9 +50,9 @@ const About: React.FC = () => {
             <div
               key={stat.label}
               className="p-8 rounded-2xl"
-              style={{ backgroundColor: '#EAD9C8', border: '1px solid #D6B8A5' }}
+              style={{ backgroundColor: '#F2E2B1', border: '1px solid #D5C7A3' }}
             >
-              <p className="text-5xl font-light mb-2" style={{ color: '#8C6A55' }}>{stat.value}</p>
+              <p className="text-5xl font-light mb-2" style={{ color: '#7A6038' }}>{stat.value}</p>
               <p className="text-sm font-medium tracking-wide uppercase" style={{ color: '#9C8070' }}>{stat.label}</p>
             </div>
           ))}

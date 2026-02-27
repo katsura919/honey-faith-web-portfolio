@@ -28,8 +28,8 @@ const Contact: React.FC = () => {
   };
 
   const inputStyle: React.CSSProperties = {
-    backgroundColor: '#EAD9C8',
-    border: '1px solid #D6B8A5',
+    backgroundColor: '#F2E2B1',
+    border: '1px solid #D5C7A3',
     borderRadius: '12px',
     padding: '12px 16px',
     fontSize: '14px',
@@ -47,7 +47,7 @@ const Contact: React.FC = () => {
           Get In Touch
         </p>
         <h2 className="text-4xl md:text-5xl font-light" style={{ color: '#3B2D27' }}>
-          Let's <span className="font-allura text-5xl md:text-6xl" style={{ color: '#8C6A55' }}>work together</span>
+          Let's <span className="font-allura text-5xl md:text-6xl" style={{ color: '#7A6038' }}>work together</span>
         </h2>
       </div>
 
@@ -66,7 +66,7 @@ const Contact: React.FC = () => {
             <div key={item.label} className="flex items-center gap-4">
               <div
                 className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0"
-                style={{ backgroundColor: '#EAD9C8', color: '#8C6A55' }}
+                style={{ backgroundColor: '#F2E2B1', color: '#7A6038' }}
               >
                 {item.icon}
               </div>
@@ -93,8 +93,8 @@ const Contact: React.FC = () => {
               placeholder="Your Name"
               required
               style={inputStyle}
-              onFocus={e => (e.currentTarget.style.borderColor = '#8C6A55')}
-              onBlur={e => (e.currentTarget.style.borderColor = '#D6B8A5')}
+              onFocus={e => (e.currentTarget.style.borderColor = '#7A6038')}
+              onBlur={e => (e.currentTarget.style.borderColor = '#D5C7A3')}
             />
             <input
               name="email"
@@ -102,8 +102,8 @@ const Contact: React.FC = () => {
               placeholder="Your Email"
               required
               style={inputStyle}
-              onFocus={e => (e.currentTarget.style.borderColor = '#8C6A55')}
-              onBlur={e => (e.currentTarget.style.borderColor = '#D6B8A5')}
+              onFocus={e => (e.currentTarget.style.borderColor = '#7A6038')}
+              onBlur={e => (e.currentTarget.style.borderColor = '#D5C7A3')}
             />
             <textarea
               name="message"
@@ -111,17 +111,17 @@ const Contact: React.FC = () => {
               rows={5}
               required
               style={{ ...inputStyle, resize: 'vertical' }}
-              onFocus={e => (e.currentTarget.style.borderColor = '#8C6A55')}
-              onBlur={e => (e.currentTarget.style.borderColor = '#D6B8A5')}
+              onFocus={e => (e.currentTarget.style.borderColor = '#7A6038')}
+              onBlur={e => (e.currentTarget.style.borderColor = '#D5C7A3')}
             />
 
             <button
               type="submit"
               disabled={status === 'sending' || status === 'sent'}
               className="px-8 py-3 rounded-full text-sm font-medium transition-all duration-200 hover:scale-105 disabled:opacity-60 disabled:cursor-not-allowed"
-              style={{ backgroundColor: '#D6B8A5', color: '#3B2D27' }}
-              onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#C9A88F')}
-              onMouseLeave={e => (e.currentTarget.style.backgroundColor = '#D6B8A5')}
+              style={{ backgroundColor: '#D5C7A3', color: '#3B2D27' }}
+              onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#BDB395')}
+              onMouseLeave={e => (e.currentTarget.style.backgroundColor = '#D5C7A3')}
             >
               {status === 'sending' ? 'Sending…' : status === 'sent' ? 'Message Sent ✓' : 'Send Message'}
             </button>

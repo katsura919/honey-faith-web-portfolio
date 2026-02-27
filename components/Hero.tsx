@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
       <div
         className="absolute w-[520px] h-[520px] rounded-full pointer-events-none"
         style={{
-          border: '1px solid #D6B8A5',
+          border: '1px solid #D5C7A3',
           opacity: 0.35,
           top: '50%',
           left: '50%',
@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
       <div
         className="absolute w-[680px] h-[680px] rounded-full pointer-events-none"
         style={{
-          border: '1px solid #D6B8A5',
+          border: '1px solid #D5C7A3',
           opacity: 0.18,
           top: '50%',
           left: '50%',
@@ -42,7 +42,7 @@ const Hero: React.FC = () => {
         {/* Name */}
         <h1
           className="font-allura leading-none mb-6 animate-fade-in-up-2"
-          style={{ fontSize: 'clamp(5rem, 14vw, 10rem)', color: '#8C6A55' }}
+          style={{ fontSize: 'clamp(5rem, 14vw, 10rem)', color: '#7A6038' }}
         >
           Honey Faith
         </h1>
@@ -68,17 +68,17 @@ const Hero: React.FC = () => {
           <a
             href="#services"
             className="px-8 py-3 rounded-full text-sm font-medium transition-all duration-200 hover:scale-105"
-            style={{ backgroundColor: '#D6B8A5', color: '#3B2D27' }}
-            onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#C9A88F')}
-            onMouseLeave={e => (e.currentTarget.style.backgroundColor = '#D6B8A5')}
+            style={{ backgroundColor: '#D5C7A3', color: '#3B2D27' }}
+            onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#BDB395')}
+            onMouseLeave={e => (e.currentTarget.style.backgroundColor = '#D5C7A3')}
           >
             View My Work
           </a>
           <a
             href="#contact"
             className="px-8 py-3 rounded-full text-sm font-medium border transition-all duration-200 hover:scale-105 flex items-center gap-2"
-            style={{ borderColor: '#D6B8A5', color: '#6B5A4E', backgroundColor: 'transparent' }}
-            onMouseEnter={e => { e.currentTarget.style.backgroundColor = '#EAD9C8'; }}
+            style={{ borderColor: '#D5C7A3', color: '#6B5A4E', backgroundColor: 'transparent' }}
+            onMouseEnter={e => { e.currentTarget.style.backgroundColor = '#F2E2B1'; }}
             onMouseLeave={e => { e.currentTarget.style.backgroundColor = 'transparent'; }}
           >
             <Mail className="w-4 h-4" /> Contact Me

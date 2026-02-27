@@ -3,11 +3,11 @@ import { Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
-    <footer id="contact-footer" className="px-6 md:px-12 lg:px-20 py-20 relative overflow-hidden" style={{ backgroundColor: '#3B2D27', color: '#EAD9C8' }}>
+    <footer id="contact-footer" className="px-6 md:px-12 lg:px-20 py-20 relative overflow-hidden" style={{ backgroundColor: '#3B2D27', color: '#F2E2B1' }}>
 
       {/* Decorative large text */}
       <div className="absolute top-0 left-0 w-full overflow-hidden pointer-events-none select-none" style={{ opacity: 0.04 }}>
-        <h1 className="text-[12rem] font-light whitespace-nowrap leading-none font-allura" style={{ color: '#EAD9C8' }}>
+        <h1 className="text-[12rem] font-light whitespace-nowrap leading-none font-allura" style={{ color: '#F2E2B1' }}>
           Honey Faith
         </h1>
       </div>
@@ -16,16 +16,16 @@ const Footer: React.FC = () => {
 
         {/* Left */}
         <div className="max-w-lg">
-          <h2 className="font-allura text-5xl mb-4" style={{ color: '#D6B8A5' }}>Honey Faith</h2>
+          <h2 className="font-allura text-5xl mb-4" style={{ color: '#D5C7A3' }}>Honey Faith</h2>
           <p className="text-sm font-light leading-relaxed mb-6" style={{ color: '#C4AA97' }}>
             Detail-oriented Virtual Assistant and Digital Support Specialist based in the Philippines, serving North American clients with reliability and care.
           </p>
           <a
             href="mailto:honeyfaith.avs@gmail.com"
             className="inline-flex items-center gap-2 text-base font-light border-b pb-0.5 transition-colors duration-200"
-            style={{ color: '#D6B8A5', borderColor: '#D6B8A5' }}
-            onMouseEnter={e => { e.currentTarget.style.color = '#EAD9C8'; e.currentTarget.style.borderColor = '#EAD9C8'; }}
-            onMouseLeave={e => { e.currentTarget.style.color = '#D6B8A5'; e.currentTarget.style.borderColor = '#D6B8A5'; }}
+            style={{ color: '#D5C7A3', borderColor: '#D5C7A3' }}
+            onMouseEnter={e => { e.currentTarget.style.color = '#F2E2B1'; e.currentTarget.style.borderColor = '#F2E2B1'; }}
+            onMouseLeave={e => { e.currentTarget.style.color = '#D5C7A3'; e.currentTarget.style.borderColor = '#D5C7A3'; }}
           >
             honeyfaith.avs@gmail.com
           </a>
@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
                 href={l.href}
                 className="text-sm font-light transition-colors duration-200"
                 style={{ color: '#C4AA97' }}
-                onMouseEnter={e => (e.currentTarget.style.color = '#EAD9C8')}
+                onMouseEnter={e => (e.currentTarget.style.color = '#F2E2B1')}
                 onMouseLeave={e => (e.currentTarget.style.color = '#C4AA97')}
               >
                 {l.label}
@@ -60,7 +60,7 @@ const Footer: React.FC = () => {
                 href="#"
                 className="w-9 h-9 rounded-full flex items-center justify-center transition-all duration-200"
                 style={{ border: '1px solid #6B5A4E', color: '#C4AA97' }}
-                onMouseEnter={e => { e.currentTarget.style.backgroundColor = '#D6B8A5'; e.currentTarget.style.color = '#3B2D27'; }}
+                onMouseEnter={e => { e.currentTarget.style.backgroundColor = '#D5C7A3'; e.currentTarget.style.color = '#3B2D27'; }}
                 onMouseLeave={e => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = '#C4AA97'; }}
               >
                 <Icon className="w-3.5 h-3.5" />
@@ -76,8 +76,8 @@ const Footer: React.FC = () => {
       >
         <p>&copy; {new Date().getFullYear()} Honey Faith. All rights reserved.</p>
         <div className="flex gap-6 mt-3 md:mt-0">
-          <a href="#" className="hover:text-[#D6B8A5] transition-colors">Privacy Policy</a>
-          <a href="#" className="hover:text-[#D6B8A5] transition-colors">Terms of Service</a>
+          <a href="#" className="hover:text-[#D5C7A3] transition-colors">Privacy Policy</a>
+          <a href="#" className="hover:text-[#D5C7A3] transition-colors">Terms of Service</a>
         </div>
       </div>
     </footer>

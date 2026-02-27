@@ -20,7 +20,7 @@ const Skills: React.FC = () => {
           What I Do
         </p>
         <h2 className="text-4xl md:text-5xl font-light" style={{ color: '#3B2D27' }}>
-          Core <span className="font-allura text-5xl md:text-6xl" style={{ color: '#8C6A55' }}>Skills</span>
+          Core <span className="font-allura text-5xl md:text-6xl" style={{ color: '#7A6038' }}>Skills</span>
         </h2>
       </div>
 
@@ -29,13 +29,13 @@ const Skills: React.FC = () => {
           <div
             key={skill.label}
             className="group p-6 rounded-2xl flex flex-col items-center text-center gap-3 transition-all duration-200 cursor-default hover:-translate-y-1"
-            style={{ backgroundColor: '#EAD9C8', border: '1px solid #D6B8A5' }}
-            onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#D6B8A5')}
-            onMouseLeave={e => (e.currentTarget.style.backgroundColor = '#EAD9C8')}
+            style={{ backgroundColor: '#F2E2B1', border: '1px solid #D5C7A3' }}
+            onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#D5C7A3')}
+            onMouseLeave={e => (e.currentTarget.style.backgroundColor = '#F2E2B1')}
           >
             <div
               className="w-11 h-11 rounded-full flex items-center justify-center"
-              style={{ backgroundColor: '#F5EDE6', color: '#8C6A55' }}
+              style={{ backgroundColor: '#F6F0F0', color: '#7A6038' }}
             >
               {skill.icon}
             </div>

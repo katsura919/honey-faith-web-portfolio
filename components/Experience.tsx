@@ -47,7 +47,7 @@ const Experience: React.FC = () => {
           Work History
         </p>
         <h2 className="text-4xl md:text-5xl font-light" style={{ color: '#3B2D27' }}>
-          My <span className="font-allura text-5xl md:text-6xl" style={{ color: '#8C6A55' }}>Experience</span>
+          My <span className="font-allura text-5xl md:text-6xl" style={{ color: '#7A6038' }}>Experience</span>
         </h2>
       </div>
 
@@ -55,7 +55,7 @@ const Experience: React.FC = () => {
         {/* Vertical line */}
         <div
           className="absolute left-4 md:left-6 top-0 bottom-0 w-px"
-          style={{ backgroundColor: '#D6B8A5' }}
+          style={{ backgroundColor: '#D5C7A3' }}
         />
 
         <div className="flex flex-col gap-12">
@@ -64,12 +64,12 @@ const Experience: React.FC = () => {
               {/* Dot */}
               <div
                 className="absolute left-2 md:left-4 top-1.5 w-4 h-4 rounded-full border-2"
-                style={{ backgroundColor: '#F5EDE6', borderColor: '#8C6A55' }}
+                style={{ backgroundColor: '#F6F0F0', borderColor: '#7A6038' }}
               />
 
               <div
                 className="p-7 rounded-2xl"
-                style={{ backgroundColor: '#EAD9C8', border: '1px solid #D6B8A5' }}
+                style={{ backgroundColor: '#F2E2B1', border: '1px solid #D5C7A3' }}
               >
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-4">
                   <h3 className="text-base font-semibold" style={{ color: '#3B2D27' }}>
@@ -77,7 +77,7 @@ const Experience: React.FC = () => {
                   </h3>
                   <span
                     className="text-xs font-medium tracking-wide px-3 py-1 rounded-full w-fit"
-                    style={{ backgroundColor: '#D6B8A5', color: '#3B2D27' }}
+                    style={{ backgroundColor: '#D5C7A3', color: '#3B2D27' }}
                   >
                     {entry.period}
                   </span>
@@ -86,7 +86,7 @@ const Experience: React.FC = () => {
                 <ul className="flex flex-col gap-2">
                   {entry.bullets.map((b, j) => (
                     <li key={j} className="text-sm font-light flex items-start gap-2" style={{ color: '#6B5A4E' }}>
-                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: '#C9A88F' }} />
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: '#BDB395' }} />
                       {b}
                     </li>
                   ))}

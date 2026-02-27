@@ -14,7 +14,7 @@ const Languages: React.FC = () => {
           Communication
         </p>
         <h2 className="text-4xl md:text-5xl font-light" style={{ color: '#3B2D27' }}>
-          <span className="font-allura text-5xl md:text-6xl" style={{ color: '#8C6A55' }}>Languages</span>
+          <span className="font-allura text-5xl md:text-6xl" style={{ color: '#7A6038' }}>Languages</span>
         </h2>
       </div>
 
@@ -23,7 +23,7 @@ const Languages: React.FC = () => {
           <div
             key={lang.name}
             className="flex items-center gap-3 px-6 py-4 rounded-2xl"
-            style={{ backgroundColor: '#EAD9C8', border: '1px solid #D6B8A5' }}
+            style={{ backgroundColor: '#F2E2B1', border: '1px solid #D5C7A3' }}
           >
             <span className="text-2xl">{lang.flag}</span>
             <div>

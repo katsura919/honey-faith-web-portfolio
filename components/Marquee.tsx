@@ -9,19 +9,19 @@ const Marquee: React.FC = () => {
   ];
 
   return (
-    <div className="py-5 overflow-hidden relative flex z-20" style={{ backgroundColor: '#D6B8A5' }}>
-      <div className="absolute left-0 top-0 bottom-0 w-16 z-10" style={{ background: 'linear-gradient(to right, #D6B8A5, transparent)' }} />
+    <div className="py-5 overflow-hidden relative flex z-20" style={{ backgroundColor: '#D5C7A3' }}>
+      <div className="absolute left-0 top-0 bottom-0 w-16 z-10" style={{ background: 'linear-gradient(to right, #D5C7A3, transparent)' }} />
       <div className="animate-marquee whitespace-nowrap flex items-center">
         {[...skills, ...skills, ...skills].map((skill, index) => (
           <div key={index} className="flex items-center mx-6">
-            <Sparkles className="w-4 h-4 mr-5" style={{ color: '#8C6A55', opacity: 0.7 }} />
+            <Sparkles className="w-4 h-4 mr-5" style={{ color: '#7A6038', opacity: 0.7 }} />
             <span className="text-xl md:text-2xl font-semibold tracking-widest uppercase" style={{ color: '#3B2D27' }}>
               {skill}
             </span>
           </div>
         ))}
       </div>
-      <div className="absolute right-0 top-0 bottom-0 w-16 z-10" style={{ background: 'linear-gradient(to left, #D6B8A5, transparent)' }} />
+      <div className="absolute right-0 top-0 bottom-0 w-16 z-10" style={{ background: 'linear-gradient(to left, #D5C7A3, transparent)' }} />
     </div>
   );
 };
