@@ -3,9 +3,9 @@ import { Sparkles } from 'lucide-react';
 
 const Marquee: React.FC = () => {
   const skills = [
-    'DATA ENTRY', 'VIRTUAL ASSISTANCE', 'CALENDAR MANAGEMENT',
-    'EMAIL HANDLING', 'RESEARCH', 'CANVA DESIGN',
-    'CUSTOMER SUPPORT', 'SEO BASICS', 'CRM SYSTEMS'
+    'DATA ENTRY', 'VIRTUAL ASSISTANCE', 'COLD CALLING',
+    'CALENDAR MANAGEMENT', 'EMAIL HANDLING', 'CANVA DESIGN',
+    'CUSTOMER SUPPORT', 'SEO BASICS', 'CRM SYSTEMS', 'ADMIN ASSISTANCE'
   ];
 
   return (

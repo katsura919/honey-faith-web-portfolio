@@ -12,12 +12,15 @@ import Footer from './components/Footer';
 
 const App: React.FC = () => {
   return (
-    <div className="relative overflow-x-hidden w-full" style={{ backgroundColor: 'var(--color-bg)' }}>
+    <div
+      className="relative overflow-x-hidden w-full"
+      style={{ backgroundColor: "var(--color-bg)" }}
+    >
       <Header />
       <main>
         <Hero />
-        <About />
         <Marquee />
+        <About />
         <Services />
         <Experience />
         <Skills />

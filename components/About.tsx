@@ -3,7 +3,7 @@ import { MapPin, GraduationCap, Globe } from 'lucide-react';
 
 const About: React.FC = () => {
   const stats = [
-    { value: '2+', label: 'Years of Experience' },
+    { value: '4+', label: 'Years of Experience' },
     { value: '3', label: 'Career Roles' },
     { value: '100%', label: 'Remote & Reliable' },
   ];
@@ -21,13 +21,10 @@ const About: React.FC = () => {
           </h2>
 
           <p className="text-base font-light leading-relaxed mb-5" style={{ color: '#6B5A4E' }}>
-            I'm Honey Faith, a dedicated Virtual Assistant and Digital Support Specialist based in Philippines. With over 2 years of hands-on experience in administrative
-            support, real estate data entry, SEO, and technical assistance, I help
-            clients stay organized, efficient, and focused on growth.
+            I'm Honey Faith, a detail-oriented and reliable professional with 2+ years of experience in administrative support, data entry, cold calling, and content assistance. I have a strong background in real estate property listing management, Canva editing, SEO, and customer-facing roles.
           </p>
           <p className="text-base font-light leading-relaxed mb-8" style={{ color: '#6B5A4E' }}>
-            My background in BS Accountancy sharpened my eye for accuracy and detail — qualities
-            I bring to every task, from managing CRM databases to scheduling and client communication.
+            As an undergraduate in BS Accountancy, I bring hands-on experience in both technical and marketing-related tasks — adaptable and proactive, with a passion for delivering quality support to teams and clients across North America and beyond.
           </p>
 
           <div className="flex flex-col gap-3">

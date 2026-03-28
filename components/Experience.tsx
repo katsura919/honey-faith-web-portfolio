@@ -2,6 +2,7 @@ import React from 'react';
 
 interface ExperienceEntry {
   title: string;
+  company: string;
   period: string;
   bullets: string[];
 }
@@ -9,32 +10,35 @@ interface ExperienceEntry {
 const entries: ExperienceEntry[] = [
   {
     title: 'Data Entry Specialist',
+    company: 'AVSPH · Remote · USA',
     period: '2024 – Present',
     bullets: [
-      'Real estate property listing management',
-      'CRM and dialer system updates',
-      'Uploading property data and images',
-      'Database maintenance and quality checks',
+      'Sorts and organizes real estate property listings (houses for sale) for U.S.-based clients',
+      'Accurately inputs property details into CRM and dialer systems to support outbound sales and appointment setting',
+      'Uploads photos, descriptions, pricing, and other essential data for active property listings',
+      'Maintains up-to-date database and coordinates with the marketing team to ensure clean, verified listings',
     ],
   },
   {
     title: 'Digital Content & SEO Assistant',
+    company: 'Garage Door Company & Sunny Builders Group · Remote · USA',
     period: '2023 – 2024',
     bullets: [
-      'Google My Business posting and optimization',
-      'Canva content creation for social media',
-      'Social media scheduling and management',
-      'Basic SEO and keyword research',
+      'Created Google My Business (GMB) posts using Canva for both companies to improve online visibility',
+      'Scheduled and published content across Facebook, Instagram, and GMB',
+      'Performed basic SEO tasks including keyword research and on-page content optimization',
+      'Handled general administrative tasks, content planning, and performance tracking',
     ],
   },
   {
-    title: 'Technical Support Representative – Linksys',
+    title: 'Technical Support Representative (Voice and Chat)',
+    company: 'Linksys (Client Account) · Remote · Philippines',
     period: '2022 – 2024',
     bullets: [
-      'Tier 1 & Tier 2 customer support',
-      'Router setup and network troubleshooting',
-      'CRM documentation and ticket management',
-      'Customer issue resolution and escalation handling',
+      'Provided Tier 1 and Tier 2 technical support for internet connectivity and router setup',
+      'Handled customer complaints and resolved issues via phone, chat, and email',
+      'Worked cross-functionally with escalation teams and followed up on unresolved issues',
+      'Developed strong communication, troubleshooting, and CRM management skills',
     ],
   },
 ];
@@ -71,12 +75,17 @@ const Experience: React.FC = () => {
                 className="p-7 rounded-2xl"
                 style={{ backgroundColor: '#F2E2B1', border: '1px solid #D5C7A3' }}
               >
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-4">
-                  <h3 className="text-base font-semibold" style={{ color: '#3B2D27' }}>
-                    {entry.title}
-                  </h3>
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-4">
+                  <div>
+                    <h3 className="text-base font-semibold" style={{ color: '#3B2D27' }}>
+                      {entry.title}
+                    </h3>
+                    <p className="text-xs font-light mt-0.5" style={{ color: '#9C8070' }}>
+                      {entry.company}
+                    </p>
+                  </div>
                   <span
-                    className="text-xs font-medium tracking-wide px-3 py-1 rounded-full w-fit"
+                    className="text-xs font-medium tracking-wide px-3 py-1 rounded-full w-fit flex-shrink-0"
                     style={{ backgroundColor: '#D5C7A3', color: '#3B2D27' }}
                   >
                     {entry.period}
