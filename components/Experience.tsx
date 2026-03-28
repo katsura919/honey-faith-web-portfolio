@@ -47,11 +47,11 @@ const Experience: React.FC = () => {
   return (
     <section id="experience" className="py-24 px-6 md:px-12 lg:px-20 max-w-screen-xl mx-auto">
       <div className="mb-14">
-        <p className="text-xs font-medium tracking-[0.3em] uppercase mb-3" style={{ color: '#9C8070' }}>
+        <p className="text-xs font-medium tracking-[0.3em] uppercase mb-3" style={{ color: '#7C6650' }}>
           Work History
         </p>
-        <h2 className="text-4xl md:text-5xl font-light" style={{ color: '#3B2D27' }}>
-          My <span className="font-allura text-5xl md:text-6xl" style={{ color: '#7A6038' }}>Experience</span>
+        <h2 className="font-playfair text-4xl md:text-5xl font-normal" style={{ color: '#1C1410' }}>
+          My <span className="font-allura text-5xl md:text-6xl" style={{ color: '#8C5F1A' }}>Experience</span>
         </h2>
       </div>
 
@@ -59,7 +59,7 @@ const Experience: React.FC = () => {
         {/* Vertical line */}
         <div
           className="absolute left-4 md:left-6 top-0 bottom-0 w-px"
-          style={{ backgroundColor: '#D5C7A3' }}
+          style={{ backgroundColor: 'rgba(212,168,67,0.4)' }}
         />
 
         <div className="flex flex-col gap-12">
@@ -68,25 +68,25 @@ const Experience: React.FC = () => {
               {/* Dot */}
               <div
                 className="absolute left-2 md:left-4 top-1.5 w-4 h-4 rounded-full border-2"
-                style={{ backgroundColor: '#F6F0F0', borderColor: '#7A6038' }}
+                style={{ backgroundColor: '#FAF7F2', borderColor: '#8C5F1A' }}
               />
 
               <div
                 className="p-7 rounded-2xl"
-                style={{ backgroundColor: '#F2E2B1', border: '1px solid #D5C7A3' }}
+                style={{ backgroundColor: '#FFF8EC', border: '1px solid rgba(212,168,67,0.35)' }}
               >
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-4">
                   <div>
-                    <h3 className="text-base font-semibold" style={{ color: '#3B2D27' }}>
+                    <h3 className="text-base font-semibold" style={{ color: '#1C1410' }}>
                       {entry.title}
                     </h3>
-                    <p className="text-xs font-light mt-0.5" style={{ color: '#9C8070' }}>
+                    <p className="text-xs font-light mt-0.5" style={{ color: '#7C6650' }}>
                       {entry.company}
                     </p>
                   </div>
                   <span
                     className="text-xs font-medium tracking-wide px-3 py-1 rounded-full w-fit flex-shrink-0"
-                    style={{ backgroundColor: '#D5C7A3', color: '#3B2D27' }}
+                    style={{ backgroundColor: 'rgba(212,168,67,0.2)', color: '#8C5F1A' }}
                   >
                     {entry.period}
                   </span>
@@ -94,8 +94,8 @@ const Experience: React.FC = () => {
 
                 <ul className="flex flex-col gap-2">
                   {entry.bullets.map((b, j) => (
-                    <li key={j} className="text-sm font-light flex items-start gap-2" style={{ color: '#6B5A4E' }}>
-                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: '#BDB395' }} />
+                    <li key={j} className="text-sm font-light flex items-start gap-2" style={{ color: '#6B5440' }}>
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: '#D4A843' }} />
                       {b}
                     </li>
                   ))}

@@ -3,11 +3,11 @@ import { Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
-    <footer id="contact-footer" className="px-6 md:px-12 lg:px-20 py-20 relative overflow-hidden" style={{ backgroundColor: '#3B2D27', color: '#F2E2B1' }}>
+    <footer id="contact-footer" className="px-6 md:px-12 lg:px-20 py-20 relative overflow-hidden" style={{ backgroundColor: '#1C1410', color: '#FFF8EC' }}>
 
       {/* Decorative large text */}
       <div className="absolute top-0 left-0 w-full overflow-hidden pointer-events-none select-none" style={{ opacity: 0.04 }}>
-        <h1 className="text-[12rem] font-light whitespace-nowrap leading-none font-allura" style={{ color: '#F2E2B1' }}>
+        <h1 className="text-[12rem] font-light whitespace-nowrap leading-none font-allura" style={{ color: '#FFF8EC' }}>
           Honey Faith
         </h1>
       </div>
@@ -16,16 +16,16 @@ const Footer: React.FC = () => {
 
         {/* Left */}
         <div className="max-w-lg">
-          <h2 className="font-allura text-5xl mb-4" style={{ color: '#D5C7A3' }}>Honey Faith</h2>
-          <p className="text-sm font-light leading-relaxed mb-6" style={{ color: '#C4AA97' }}>
+          <h2 className="font-allura text-5xl mb-4" style={{ color: '#D4A843' }}>Honey Faith</h2>
+          <p className="text-sm font-light leading-relaxed mb-6" style={{ color: '#C4A882' }}>
             Detail-oriented Virtual Assistant and Digital Support Specialist based in the Philippines, serving North American clients with reliability and care.
           </p>
           <a
             href="mailto:honeyfaith.avs@gmail.com"
             className="inline-flex items-center gap-2 text-base font-light border-b pb-0.5 transition-colors duration-200"
-            style={{ color: '#D5C7A3', borderColor: '#D5C7A3' }}
-            onMouseEnter={e => { e.currentTarget.style.color = '#F2E2B1'; e.currentTarget.style.borderColor = '#F2E2B1'; }}
-            onMouseLeave={e => { e.currentTarget.style.color = '#D5C7A3'; e.currentTarget.style.borderColor = '#D5C7A3'; }}
+            style={{ color: '#D4A843', borderColor: '#D4A843' }}
+            onMouseEnter={e => { e.currentTarget.style.color = '#FFF8EC'; e.currentTarget.style.borderColor = '#FFF8EC'; }}
+            onMouseLeave={e => { e.currentTarget.style.color = '#D4A843'; e.currentTarget.style.borderColor = '#D4A843'; }}
           >
             honeyfaith.avs@gmail.com
           </a>
@@ -44,9 +44,9 @@ const Footer: React.FC = () => {
                 key={l.label}
                 href={l.href}
                 className="text-sm font-light transition-colors duration-200"
-                style={{ color: '#C4AA97' }}
-                onMouseEnter={e => (e.currentTarget.style.color = '#F2E2B1')}
-                onMouseLeave={e => (e.currentTarget.style.color = '#C4AA97')}
+                style={{ color: '#C4A882' }}
+                onMouseEnter={e => (e.currentTarget.style.color = '#FFF8EC')}
+                onMouseLeave={e => (e.currentTarget.style.color = '#C4A882')}
               >
                 {l.label}
               </a>
@@ -59,9 +59,9 @@ const Footer: React.FC = () => {
                 key={idx}
                 href="#"
                 className="w-9 h-9 rounded-full flex items-center justify-center transition-all duration-200"
-                style={{ border: '1px solid #6B5A4E', color: '#C4AA97' }}
-                onMouseEnter={e => { e.currentTarget.style.backgroundColor = '#D5C7A3'; e.currentTarget.style.color = '#3B2D27'; }}
-                onMouseLeave={e => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = '#C4AA97'; }}
+                style={{ border: '1px solid rgba(212,168,67,0.3)', color: '#C4A882' }}
+                onMouseEnter={e => { e.currentTarget.style.backgroundColor = '#D4A843'; e.currentTarget.style.color = '#1C1410'; }}
+                onMouseLeave={e => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = '#C4A882'; }}
               >
                 <Icon className="w-3.5 h-3.5" />
               </a>
@@ -72,12 +72,12 @@ const Footer: React.FC = () => {
 
       <div
         className="mt-16 pt-6 flex flex-col md:flex-row justify-between items-center text-xs font-light"
-        style={{ borderTop: '1px solid #6B5A4E', color: '#9C8070' }}
+        style={{ borderTop: '1px solid rgba(212,168,67,0.2)', color: '#7C6650' }}
       >
         <p>&copy; {new Date().getFullYear()} Honey Faith. All rights reserved.</p>
         <div className="flex gap-6 mt-3 md:mt-0">
-          <a href="#" className="hover:text-[#D5C7A3] transition-colors">Privacy Policy</a>
-          <a href="#" className="hover:text-[#D5C7A3] transition-colors">Terms of Service</a>
+          <a href="#" className="hover:text-[#D4A843] transition-colors">Privacy Policy</a>
+          <a href="#" className="hover:text-[#D4A843] transition-colors">Terms of Service</a>
         </div>
       </div>
     </footer>

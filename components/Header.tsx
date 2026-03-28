@@ -26,10 +26,10 @@ const Header: React.FC = () => {
           ? 'border-b'
           : 'border-b border-transparent'
       }`}
-      style={isScrolled ? { backgroundColor: 'rgba(246,240,240,0.92)', backdropFilter: 'blur(10px)', borderColor: '#D5C7A3' } : {}}
+      style={isScrolled ? { backgroundColor: 'rgba(250,247,242,0.92)', backdropFilter: 'blur(10px)', borderColor: 'rgba(212,168,67,0.4)' } : {}}
     >
       {/* Logo */}
-      <a href="#home" className="font-allura text-3xl" style={{ color: '#7A6038' }}>
+      <a href="#home" className="font-allura text-3xl" style={{ color: '#8C5F1A' }}>
         Honey Faith
       </a>
 
@@ -40,9 +40,9 @@ const Header: React.FC = () => {
             key={link.name}
             href={link.href}
             className="text-sm font-medium tracking-wide transition-colors duration-200"
-            style={{ color: '#6B5A4E' }}
-            onMouseEnter={e => (e.currentTarget.style.color = '#7A6038')}
-            onMouseLeave={e => (e.currentTarget.style.color = '#6B5A4E')}
+            style={{ color: '#6B5440' }}
+            onMouseEnter={e => (e.currentTarget.style.color = '#8C5F1A')}
+            onMouseLeave={e => (e.currentTarget.style.color = '#6B5440')}
           >
             {link.name}
           </a>
@@ -50,9 +50,9 @@ const Header: React.FC = () => {
         <a
           href="#contact"
           className="px-5 py-2 rounded-full text-sm font-medium transition-all duration-200"
-          style={{ backgroundColor: '#D5C7A3', color: '#3B2D27' }}
-          onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#BDB395')}
-          onMouseLeave={e => (e.currentTarget.style.backgroundColor = '#D5C7A3')}
+          style={{ backgroundColor: '#D4A843', color: '#1C1410' }}
+          onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#B8892A')}
+          onMouseLeave={e => (e.currentTarget.style.backgroundColor = '#D4A843')}
         >
           Hire Me
         </a>
@@ -61,7 +61,7 @@ const Header: React.FC = () => {
       {/* Mobile Toggle */}
       <button
         className="md:hidden p-2"
-        style={{ color: '#6B5A4E' }}
+        style={{ color: '#6B5440' }}
         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
       >
         {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -71,14 +71,14 @@ const Header: React.FC = () => {
       {mobileMenuOpen && (
         <div
           className="absolute top-full left-0 w-full p-6 flex flex-col gap-5 md:hidden shadow-lg border-t"
-          style={{ backgroundColor: '#F6F0F0', borderColor: '#D5C7A3' }}
+          style={{ backgroundColor: '#FAF7F2', borderColor: 'rgba(212,168,67,0.4)' }}
         >
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
               className="text-base font-medium"
-              style={{ color: '#4A3728' }}
+              style={{ color: '#2D2015' }}
               onClick={() => setMobileMenuOpen(false)}
             >
               {link.name}

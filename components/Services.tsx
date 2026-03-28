@@ -10,11 +10,11 @@ interface ServiceCardProps {
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon, active }) => {
   const [hovered, setHovered] = React.useState(false);
-  const bg = active ? '#D5C7A3' : hovered ? '#F2E2B1' : '#F6F0F0';
-  const border = '#D5C7A3';
-  const textColor = '#3B2D27';
-  const mutedColor = '#9C8070';
-  const iconBg = active ? '#BDB395' : '#F2E2B1';
+  const bg = active ? '#D4A843' : hovered ? 'rgba(212,168,67,0.12)' : '#FAF7F2';
+  const border = 'rgba(212,168,67,0.35)';
+  const textColor = '#1C1410';
+  const mutedColor = '#7C6650';
+  const iconBg = active ? '#B8892A' : '#FFF8EC';
 
   return (
     <div
@@ -23,14 +23,14 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon, act
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: iconBg, color: '#7A6038' }}>
+      <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: iconBg, color: '#8C5F1A' }}>
         {icon}
       </div>
       <div>
         <h3 className="text-base font-semibold mb-2 uppercase tracking-wide" style={{ color: textColor }}>{title}</h3>
         <p className="text-sm font-light leading-relaxed" style={{ color: mutedColor }}>{description}</p>
       </div>
-      <div className="flex items-center gap-1 text-xs font-medium tracking-wide uppercase" style={{ color: '#7A6038' }}>
+      <div className="flex items-center gap-1 text-xs font-medium tracking-wide uppercase" style={{ color: '#8C5F1A' }}>
         Learn More <ArrowRight className="w-3 h-3" />
       </div>
     </div>
@@ -41,9 +41,9 @@ const Services: React.FC = () => {
   return (
     <section id="services" className="py-24 px-6 md:px-12 lg:px-20 max-w-screen-xl mx-auto">
       <div className="mb-14">
-        <p className="text-xs font-medium tracking-[0.3em] uppercase mb-3" style={{ color: '#9C8070' }}>What I Offer</p>
-        <h2 className="text-4xl md:text-5xl font-light" style={{ color: '#3B2D27' }}>
-          Services &amp; <span className="font-allura text-5xl md:text-6xl" style={{ color: '#7A6038' }}>Expertise</span>
+        <p className="text-xs font-medium tracking-[0.3em] uppercase mb-3" style={{ color: '#7C6650' }}>What I Offer</p>
+        <h2 className="font-playfair text-4xl md:text-5xl font-normal" style={{ color: '#1C1410' }}>
+          Services &amp; <span className="font-allura text-5xl md:text-6xl" style={{ color: '#8C5F1A' }}>Expertise</span>
         </h2>
       </div>
 

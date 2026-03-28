@@ -16,11 +16,11 @@ const Skills: React.FC = () => {
   return (
     <section id="skills" className="py-24 px-6 md:px-12 lg:px-20 max-w-screen-xl mx-auto">
       <div className="mb-14">
-        <p className="text-xs font-medium tracking-[0.3em] uppercase mb-3" style={{ color: '#9C8070' }}>
+        <p className="text-xs font-medium tracking-[0.3em] uppercase mb-3" style={{ color: '#7C6650' }}>
           What I Do
         </p>
-        <h2 className="text-4xl md:text-5xl font-light" style={{ color: '#3B2D27' }}>
-          Core <span className="font-allura text-5xl md:text-6xl" style={{ color: '#7A6038' }}>Skills</span>
+        <h2 className="font-playfair text-4xl md:text-5xl font-normal" style={{ color: '#1C1410' }}>
+          Core <span className="font-allura text-5xl md:text-6xl" style={{ color: '#8C5F1A' }}>Skills</span>
         </h2>
       </div>
 
@@ -29,17 +29,17 @@ const Skills: React.FC = () => {
           <div
             key={skill.label}
             className="group p-6 rounded-2xl flex flex-col items-center text-center gap-3 transition-all duration-200 cursor-default hover:-translate-y-1"
-            style={{ backgroundColor: '#F2E2B1', border: '1px solid #D5C7A3' }}
-            onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#D5C7A3')}
-            onMouseLeave={e => (e.currentTarget.style.backgroundColor = '#F2E2B1')}
+            style={{ backgroundColor: '#FFF8EC', border: '1px solid rgba(212,168,67,0.35)' }}
+            onMouseEnter={e => (e.currentTarget.style.backgroundColor = 'rgba(212,168,67,0.18)')}
+            onMouseLeave={e => (e.currentTarget.style.backgroundColor = '#FFF8EC')}
           >
             <div
               className="w-11 h-11 rounded-full flex items-center justify-center"
-              style={{ backgroundColor: '#F6F0F0', color: '#7A6038' }}
+              style={{ backgroundColor: '#FAF7F2', color: '#8C5F1A' }}
             >
               {skill.icon}
             </div>
-            <p className="text-sm font-medium leading-snug" style={{ color: '#3B2D27' }}>
+            <p className="text-sm font-medium leading-snug" style={{ color: '#1C1410' }}>
               {skill.label}
             </p>
           </div>
